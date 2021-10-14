@@ -1,28 +1,82 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input type="text" class="display" value="0">
+    <div class="container">
+      <button class="greyBtn grid-item grid-item1">AC</button>
+      <button class="greyBtn grid-item grid-item2">+/-</button>
+      <button class="greyBtn grid-item grid-item3">%</button>
+      <button class="orangeBtn grid-item grid-item4">/</button>
+      <button class="grid-item grid-item5">7</button>
+      <button class="grid-item grid-item6">8</button>
+      <button class="grid-item grid-item7">9</button>
+      <button class="orangeBtn grid-item grid-item8">x</button>
+      <button class="grid-item grid-item9">4</button>
+      <button class="grid-item grid-item10">5</button>
+      <button class="grid-item grid-item11">6</button>
+      <button class="orangeBtn grid-item grid-item12">-</button>
+      <button class="grid-item grid-item13">1</button>
+      <button class="grid-item grid-item14">2</button>
+      <button class="grid-item grid-item15">3</button>
+      <button class="orangeBtn grid-item grid-item16">+</button>
+      <button class="grid-item grid-item17">0</button>
+      <button class="grid-item grid-item18">,</button>
+      <button class="orangeBtn grid-item grid-item19">=</button>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 320px;
+}
+
+.container {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80px;
+  grid-gap: 2px;
+}
+
+.grid-item {
+  border: 1px solid black;
+  border-radius: 10px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  line-height: 80px;
+  vertical-align: middle;
+}
+
+.display {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: black;
+  text-align: right;
+  color: white;
+}
+
+.grid-item17 {
+  grid-column: span 2;
+}
+
+.greyBtn {
+  background-color: rgb(206, 203, 203);
+}
+
+.orangeBtn {
+  background-color: orange;
+}
+
+* {
+  box-sizing: border-box;
 }
 </style>
+
