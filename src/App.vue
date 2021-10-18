@@ -47,7 +47,6 @@ export default {
     resetValue() {
       this.current = "";
     },
-    calculateValue() {},
     dot() {
       if (this.current.indexOf(".") === -1) {
         this.appendToDisplay(".");
